@@ -38,7 +38,7 @@ class RecipeDetail extends HTMLElement {
     };
 
     this.innerHTML = `
-            <div class="card bg-light border-0 shadow-sm">
+            <div class="card bg-light border-0 shadow">
                 <div class="row g-0">
                     <div class="col-12 col-md-4 position-relative">
                         <img src="${this._content.strMealThumb}" class="img-fluid rounded-start" alt="${this._content.strMeal}">
@@ -59,13 +59,13 @@ class RecipeDetail extends HTMLElement {
             </div>
             <div class="row g-3 mt-2">
                 <div class="col-12 col-md-5 col-lg-4">
-                    <div class="bg-light h-100 p-3 rounded shadow-sm">
+                    <div class="bg-light h-100 p-3 rounded shadow">
                         <h3 class="bg-secondary text-dark text-center p-2 rounded">Ingredients</h3>
                         ${ingredients()}
                     </div>
                 </div>
                 <div class="col-12 col-md-7 col-lg-8">
-                    <div class="bg-light h-100 p-3 rounded shadow-sm">
+                    <div class="bg-light h-100 p-3 rounded shadow">
                         <h3 class="bg-secondary text-dark text-center p-2 rounded">Instructions</h3>
                         <p class="text-justify">${this._content.strInstructions}</p>
                     </div>

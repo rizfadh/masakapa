@@ -13,7 +13,7 @@ class RecipeItem extends HTMLElement {
     this.id = this._content.idMeal;
     this.classList.add('col');
     this.innerHTML = `
-            <div class="card bg-light border-0 shadow-sm" title="${this._content.strMeal}">
+            <div class="card bg-light border-0 shadow" title="${this._content.strMeal}">
                 <img src="${this._content.strMealThumb}" class="card-img-top" alt="${this._content.strMeal}">
                 <div class="card-body">
                     <h5 class="card-title text-truncate text-center">${this._content.strMeal}</h5>

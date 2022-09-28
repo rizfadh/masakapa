@@ -13,10 +13,10 @@ class CategoryItem extends HTMLElement {
     this.id = this._content.strCategory;
     this.classList.add('col');
     this.innerHTML = `
-            <div class="card bg-light border-0 shadow-sm" title="${this._content.strCategory}">
+            <div class="card bg-light border-0 shadow" title="${this._content.strCategory}">
                 <img src="${this._content.strCategoryThumb}" class="card-img-top" alt="${this._content.strCategory}">
                 <div class="card-body">
-                    <h5 class="card-title text-center">${this._content.strCategory}</h5>
+                    <h5 class="card-title text-center text-truncate">${this._content.strCategory}</h5>
                 </div>
             </div>
         `;
