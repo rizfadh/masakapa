@@ -15,9 +15,11 @@ class RecipeDetail extends HTMLElement {
       list.classList.add('list');
       for (let i = 1; i <= 20; i += 1) {
         if (this._content[`strIngredient${i}`]) {
-          if (this._content[`strMeasure${i}`] === ' ') this._content[`strMeasure${i}`] = 'To taste';
+          let measureBool = true;
+          if (this._content[`strMeasure${i}`] === ' ' || this._content[`strMeasure${i}`] === '') measureBool = false;
           const div = document.createElement('div');
-          div.innerText = `${this._content[`strIngredient${i}`]} (${this._content[`strMeasure${i}`]})`;
+          if (measureBool) div.innerText = `${this._content[`strIngredient${i}`]} (${this._content[`strMeasure${i}`]})`;
+          else div.innerText = `${this._content[`strIngredient${i}`]}`;
           list.appendChild(div);
         }
       }
@@ -41,9 +43,9 @@ class RecipeDetail extends HTMLElement {
             <div class="card bg-light border-0 shadow">
                 <div class="row g-0">
                     <div class="col-12 col-md-4 position-relative">
-                        <img src="${this._content.strMealThumb}" class="img-fluid rounded-start" alt="${this._content.strMeal}">
+                        <img src="${this._content.strMealThumb}" class="img-fluid rounded" alt="${this._content.strMeal}">
                         <div class="card-img-overlay">
-                            <button class="bg-transparent fs-2 border-0">
+                            <button class="bg-transparent fs-1 border-0">
                                 <i class="bi bi-arrow-left-square-fill link-primary"></i>
                             </button>
                         </div>
