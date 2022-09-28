@@ -32,7 +32,7 @@ const makeRecipeByCategory = (recipes) => {
   header.classList.add('d-flex', 'justify-content-center');
   const button = document.createElement('button');
   button.setAttribute('type', 'button');
-  button.classList.add('bg-transparent', 'border-0', 'fs-2');
+  button.classList.add('bg-transparent', 'border-0', 'fs-1');
   button.innerHTML = '<i class="bi bi-arrow-left-square-fill link-primary"></i>';
   button.addEventListener('click', () => {
     const searchRecipeForm = document.querySelector('#searchRecipe');
@@ -40,7 +40,7 @@ const makeRecipeByCategory = (recipes) => {
     backToPrevious('recipeByCategory');
   });
   const title = document.createElement('h2');
-  title.classList.add('flex-grow-1', 'text-center', 'mb-0');
+  title.classList.add('flex-grow-1', 'text-center', 'mb-0', 'align-self-center');
   title.innerText = 'Choose Recipe';
   header.append(button, title);
   const recipeList = document.createElement('recipe-list');
