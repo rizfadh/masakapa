@@ -15,6 +15,10 @@ recipe-item {
     text-align: justify;
 }
 
+.rounded-top-5 {
+    border-radius: $border-radius-2xl $border-radius-2xl 0 0;
+}
+
 .list {
     counter-reset: list-number;
     div::before {
